@@ -1,0 +1,66 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { foundationGallery } from '../data/site';
+---
+
+<MainLayout
+  title="Donate | Telangana Educational Foundation"
+  description="Support Telangana Educational Foundation through individual, institutional and volunteer contributions."
+  activePath="/donate"
+>
+  <section class="section" data-reveal>
+    <h1>Donate And Collaborate</h1>
+    <p>
+      You can support through individual donations, CSR partnerships, school engagement and volunteering. This static
+      flow is intentionally simple and can later be wired to a payment gateway.
+    </p>
+  </section>
+
+  <section class="section grid" data-reveal>
+    <article class="card" data-pulse>
+      <span class="badge">01</span>
+      <h3>Individual Support</h3>
+      <p>Monthly or one-time giving towards education, health and community resilience programs.</p>
+      <div class="pill-row">
+        <span>INR 1,000</span>
+        <span>INR 2,500</span>
+        <span>INR 5,000</span>
+      </div>
+    </article>
+
+    <article class="card" data-pulse>
+      <span class="badge">02</span>
+      <h3>Corporate Partnerships</h3>
+      <p>Co-create district-level interventions with transparent reporting and outcome measurement.</p>
+      <div class="pill-row">
+        <a href="mailto:info@telanganaeducationalfoundation.org">Email CSR Team</a>
+      </div>
+    </article>
+
+    <article class="card" data-pulse>
+      <span class="badge">03</span>
+      <h3>Volunteer</h3>
+      <p>Join education mentoring, health awareness events and youth career readiness workshops.</p>
+      <div class="pill-row">
+        <a href="mailto:info@telanganaeducationalfoundation.org">Register Interest</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Your Support In Action</h2>
+    <div class="image-grid">
+      {
+        foundationGallery.slice(0, 3).map((item) => (
+          <article class="image-card" data-pulse>
+            <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+            <div class="image-caption">
+              <h3>{item.title}</h3>
+              <p>{item.caption}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</MainLayout>

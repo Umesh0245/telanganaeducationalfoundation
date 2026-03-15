@@ -1,0 +1,103 @@
+---
+import { ViewTransitions } from 'astro:transitions';
+import { navItems, foundationGallery } from '../data/site';
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  activePath?: string;
+}
+
+const { title, description = 'Telangana Educational Foundation website', activePath = '/' } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/jpeg" href="/tef-logo.jpeg?v=6" />
+    <link rel="apple-touch-icon" href="/tef-logo.jpeg?v=6" />
+    <link rel="shortcut icon" href="/tef-logo.jpeg?v=6" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="mesh-bg" aria-hidden="true"></div>
+
+    <header class="site-header glass" transition:name="header-shell">
+      <a
+        class="brand"
+        href="/"
+        aria-label="Telangana Educational Foundation home"
+        transition:name="brand-anchor"
+        data-astro-prefetch
+      >
+        <img src="/tef-logo.jpeg" alt="Telangana Educational Foundation logo" transition:name="brand-logo" />
+        <span>Telangana Educational Foundation</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        {
+          navItems.map((item) => (
+            <a
+              class={activePath === item.href ? 'is-active' : ''}
+              href={item.href}
+              aria-current={activePath === item.href ? 'page' : undefined}
+              data-astro-prefetch
+            >
+              {item.label}
+            </a>
+          ))
+        }
+      </nav>
+
+      <a class="cta" href="/donate" data-astro-prefetch>Support A Cause</a>
+    </header>
+
+    <main id="main-content" transition:name="page-main">
+      <slot />
+    </main>
+
+    <section class="footer-gallery section" data-reveal>
+      <h2>Foundation Work Across Communities</h2>
+      <div class="image-grid">
+        {
+          foundationGallery.slice(0, 4).map((item) => (
+            <article class="image-card" data-pulse>
+              <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+              <div class="image-caption">
+                <h3>{item.title}</h3>
+                <p>{item.caption}</p>
+              </div>
+            </article>
+          ))
+        }
+      </div>
+    </section>
+
+    <footer class="site-footer" id="contact" transition:name="footer-shell">
+      <div class="footer-brand">
+        <img src="/tef-logo.jpeg" alt="Telangana Educational Foundation logo" />
+        <h3>Telangana Educational Foundation</h3>
+      </div>
+      <div class="footer-content">
+        <p>Hyderabad, Telangana, India</p>
+        <p>info@telanganaeducationalfoundation.org</p>
+        <p>+91 40 0000 0000</p>
+      </div>
+      <p class="copyright">© {new Date().getFullYear()} Telangana Educational Foundation. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="/scripts/site-motion.js"></script>
+  </body>
+</html>

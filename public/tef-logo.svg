@@ -1,0 +1,29 @@
+<svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="ring" x1="80" y1="80" x2="560" y2="560" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B3D91"/>
+      <stop offset="1" stop-color="#0A7A34"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="140" y1="120" x2="500" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6F6FF"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="book" x1="180" y1="402" x2="460" y2="470" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF7A00"/>
+      <stop offset="1" stop-color="#0B8F3F"/>
+    </linearGradient>
+  </defs>
+  <circle cx="320" cy="320" r="280" stroke="url(#ring)" stroke-width="24"/>
+  <circle cx="320" cy="320" r="246" fill="url(#inner)"/>
+  <path d="M205 395C253 355 283 345 320 350C357 345 387 355 435 395V452C394 420 355 407 320 412C285 407 246 420 205 452V395Z" fill="#F6F8FA" stroke="#D0D7DF" stroke-width="4"/>
+  <path d="M205 450H435L412 484H228L205 450Z" fill="url(#book)"/>
+  <path d="M320 228C356 228 388 253 398 287L320 290V228Z" fill="#FFC400"/>
+  <path d="M320 228V290L241 286C252 252 284 228 320 228Z" fill="#68B723"/>
+  <path d="M320 290L394 292C387 338 357 368 320 373V290Z" fill="#1B7A3A"/>
+  <path d="M320 373C284 368 254 338 246 292L320 290V373Z" fill="#0B4C9D"/>
+  <circle cx="320" cy="262" r="20" fill="#0B4C9D"/>
+  <path d="M320 285C341 285 356 301 356 321V358H284V321C284 301 299 285 320 285Z" fill="#0B4C9D"/>
+  <path d="M184 482H456C456 531 416 572 367 572H273C224 572 184 531 184 482Z" fill="#0A7A34"/>
+  <text x="320" y="540" text-anchor="middle" fill="#FFFFFF" font-size="34" font-family="Arial, Helvetica, sans-serif" font-weight="700">TELANGANA EDUCATIONAL</text>
+  <text x="320" y="572" text-anchor="middle" fill="#FFFFFF" font-size="32" font-family="Arial, Helvetica, sans-serif" font-weight="700">FOUNDATION</text>
+</svg>

@@ -1,0 +1,115 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { programmes, foundationGallery } from '../data/site';
+
+const implementationSteps = [
+  'Baseline mapping and community consultation in selected clusters.',
+  'Joint planning with school systems, local health teams and grassroots leaders.',
+  'Deployment of field coordinators, mentors and monitoring support.',
+  'Monthly outcome review with district-level corrective action.',
+  'Documentation, public reporting and scale-readiness assessment.'
+];
+
+const domainPriorities = [
+  'Foundational literacy and numeracy recovery in government-school ecosystems.',
+  'Preventive healthcare screening and referral continuity for vulnerable households.',
+  'Adolescent girl retention in education and safe leadership spaces.',
+  'Employer-linked skilling and placement transitions for youth.',
+  'Community resilience planning for climate and migration stress.'
+];
+---
+
+<MainLayout
+  title="Programmes | Telangana Educational Foundation"
+  description="Programmes focused on education, healthcare, women empowerment, livelihood and disaster response."
+  activePath="/programmes"
+>
+  <section class="section" data-reveal>
+    <h1>Our Programmes</h1>
+    <p class="lead">
+      Programme architecture mirrors high-impact social models: deep local engagement, measurable outcomes and sustained
+      district implementation.
+    </p>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Implementation Model</h2>
+    <div class="content-stack">
+      <p>
+        Telangana Educational Foundation follows an integrated model where education, health and livelihood pathways are
+        planned together instead of in isolation. This helps households benefit from a complete support ecosystem rather
+        than one-time interventions.
+      </p>
+      <p>
+        Programmes are designed in consultation with local communities and then aligned with institutional stakeholders.
+        Every block includes baseline indicators, six-month milestones and transparent review points.
+      </p>
+      <p>
+        By combining local implementation with clear reporting standards, we ensure that each programme remains relevant,
+        adaptive and outcome-oriented.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="grid">
+      {
+        programmes.map((program, idx) => (
+          <article class="card" data-pulse>
+            <span class="badge">{`0${idx + 1}`}</span>
+            <h3>{program.title}</h3>
+            <p>{program.summary}</p>
+            <ul>
+              {program.details.map((detail) => <li>{detail}</li>)}
+            </ul>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Programme Lifecycle</h2>
+    <ol class="number-list">
+      {implementationSteps.map((step) => <li>{step}</li>)}
+    </ol>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Domain Priorities 2026-2028</h2>
+    <div class="chip-grid">
+      {domainPriorities.map((item) => <article class="chip">{item}</article>)}
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Programme Glimpses</h2>
+    <div class="image-grid">
+      {
+        foundationGallery.map((item) => (
+          <article class="image-card" data-pulse>
+            <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+            <div class="image-caption">
+              <h3>{item.title}</h3>
+              <p>{item.caption}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Expected Outcomes</h2>
+    <div class="content-stack">
+      <p>
+        We expect measurable gains in learning continuity, early disease detection, women leadership participation and
+        youth placement outcomes. Progress is tracked through monthly field reports and quarterly external review.
+      </p>
+      <p>
+        Outcome reporting is shared in a stakeholder-friendly format to strengthen trust and support long-term
+        partnerships.
+      </p>
+    </div>
+  </section>
+</MainLayout>

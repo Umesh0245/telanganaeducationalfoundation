@@ -1,0 +1,130 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { campaigns, campaignGallery } from '../data/site';
+
+const campaignArchitecture = [
+  'Clear beneficiary profile and need statement for each campaign.',
+  'Defined output plan: kits, sessions, mentoring, referrals or placements.',
+  'Quarterly progress checkpoints and documentation updates.',
+  'Fund utilization visibility and partner communication cadence.'
+];
+
+const campaignFaqs = [
+  {
+    question: 'How are campaign funds allocated?',
+    answer:
+      'Campaign budgets are allocated to field execution, program support, monitoring and beneficiary follow-up based on approved plans.'
+  },
+  {
+    question: 'Can donors support a specific campaign only?',
+    answer:
+      'Yes. Donors can contribute to campaign-specific tracks such as education continuity, health outreach or youth skilling.'
+  },
+  {
+    question: 'Will I receive updates after contributing?',
+    answer:
+      'Yes. Updates are shared through periodic impact summaries that include activities completed and next milestones.'
+  }
+];
+---
+
+<MainLayout
+  title="Campaigns | Telangana Educational Foundation"
+  description="Campaign-led initiatives for education continuity, healthcare access, girls empowerment and youth skilling."
+  activePath="/campaigns"
+>
+  <section class="section" data-reveal>
+    <h1>Support A Cause</h1>
+    <p class="lead">
+      Campaigns are designed for focused giving and direct, trackable outcomes inspired by tested social development
+      models.
+    </p>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Campaign Strategy</h2>
+    <div class="content-stack">
+      <p>
+        Each campaign translates broad development goals into specific and measurable actions. This approach helps donors,
+        partners and community stakeholders see exactly what the initiative is solving and how progress is tracked.
+      </p>
+      <p>
+        Campaign plans are developed with local implementation teams so that interventions remain practical, culturally
+        relevant and sustainable in target communities.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <div class="grid">
+      {
+        campaigns.map((campaign, idx) => (
+          <article class="card" data-pulse>
+            <span class="badge">{`0${idx + 1}`}</span>
+            <h3>{campaign.name}</h3>
+            <p>{campaign.copy}</p>
+            <p><strong>Focus:</strong> {campaign.target}</p>
+            <div class="pill-row">
+              <a href="/donate">Contribute</a>
+              <a href="/about">Know More</a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Campaign Architecture</h2>
+    <ol class="number-list">
+      {campaignArchitecture.map((item) => <li>{item}</li>)}
+    </ol>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Campaign Outreach Gallery</h2>
+    <p class="lead">Snapshots from campaign activation moments across education, health, and youth mobilization drives.</p>
+    <div class="image-grid">
+      {
+        campaignGallery.map((item) => (
+          <article class="image-card" data-pulse>
+            <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+            <div class="image-caption">
+              <h3>{item.title}</h3>
+              <p>{item.caption}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Governance And Reporting</h2>
+    <div class="content-stack">
+      <p>
+        Campaign performance is reviewed through implementation dashboards, field reports and beneficiary feedback loops.
+        This allows quick course correction and clear communication with all supporters.
+      </p>
+      <p>
+        For institutional partners, campaign narratives can be aligned with annual CSR communication and SDG reporting
+        frameworks.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Frequently Asked Questions</h2>
+    <div class="grid">
+      {
+        campaignFaqs.map((faq, idx) => (
+          <article class="card" data-pulse>
+            <span class="badge">{`0${idx + 1}`}</span>
+            <h3>{faq.question}</h3>
+            <p>{faq.answer}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</MainLayout>

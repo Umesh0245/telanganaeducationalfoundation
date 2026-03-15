@@ -1,0 +1,74 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { impactStats, accreditations, evidenceGallery } from '../data/site';
+---
+
+<MainLayout
+  title="Impact | Telangana Educational Foundation"
+  description="Impact highlights, SDG alignment and accreditation approach for Telangana Educational Foundation."
+  activePath="/impact"
+>
+  <section class="section" data-reveal>
+    <h1>Impact Dashboard</h1>
+    <p>
+      Static highlights inspired by established nonprofit impact reporting formats, presented clearly for stakeholder
+      confidence.
+    </p>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Our Impact</h2>
+    <div class="grid">
+      {
+        impactStats.map((item) => (
+          <article class="card" data-pulse>
+            <h3>{item.value}</h3>
+            <p>{item.label}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>SDG Alignment</h2>
+    <div class="pill-row">
+      <span>SDG 3: Good Health and Well-Being</span>
+      <span>SDG 4: Quality Education</span>
+      <span>SDG 5: Gender Equality</span>
+      <span>SDG 8: Decent Work and Economic Growth</span>
+      <span>SDG 10: Reduced Inequalities</span>
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Accreditations</h2>
+    <div class="grid">
+      {
+        accreditations.map((item) => (
+          <article class="card" data-pulse>
+            <p>{item}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Evidence Gallery</h2>
+    <p class="lead">Evidence-oriented visuals representing reviews, field verification and community feedback practices.</p>
+    <div class="image-grid">
+      {
+        evidenceGallery.map((item) => (
+          <article class="image-card" data-pulse>
+            <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+            <div class="image-caption">
+              <h3>{item.title}</h3>
+              <p>{item.caption}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</MainLayout>

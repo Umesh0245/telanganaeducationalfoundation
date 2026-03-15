@@ -1,0 +1,66 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import { partnerHighlights, foundationGallery } from '../data/site';
+---
+
+<MainLayout
+  title="About | Telangana Educational Foundation"
+  description="About Telangana Educational Foundation, our mission and implementation model."
+  activePath="/about"
+>
+  <section class="section dual" data-reveal>
+    <article class="card" data-pulse>
+      <p class="badge">01</p>
+      <h1>About The Foundation</h1>
+      <p>
+        Telangana Educational Foundation is a development-focused organization inspired by proven nonprofit frameworks
+        that combine education, healthcare, women empowerment and livelihood interventions.
+      </p>
+      <p>
+        We operate as a catalyst for long-term behavior change by complementing government systems and partnering with
+        communities, schools, healthcare workers and local institutions.
+      </p>
+    </article>
+
+    <article class="card" data-pulse>
+      <h2>How We Work</h2>
+      <ul>
+        <li>Identify last-mile communities with urgent support gaps.</li>
+        <li>Design integrated interventions instead of isolated activities.</li>
+        <li>Track outcomes through transparent and periodic impact reporting.</li>
+        <li>Scale through district-level partnerships and local leadership.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Partners In Change</h2>
+    <div class="grid">
+      {
+        partnerHighlights.map((item, index) => (
+          <article class="card" data-pulse>
+            <p class="badge">{`0${index + 1}`}</p>
+            <p>{item}</p>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Our Work In Action</h2>
+    <div class="image-grid">
+      {
+        foundationGallery.slice(0, 3).map((item) => (
+          <article class="image-card" data-pulse>
+            <img src={item.src} alt={item.alt} loading="lazy" decoding="async" />
+            <div class="image-caption">
+              <h3>{item.title}</h3>
+              <p>{item.caption}</p>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</MainLayout>
