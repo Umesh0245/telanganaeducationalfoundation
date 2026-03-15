@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "engines": {
-	"node": ">=20.0.0"
+    "node": ">=20.0.0"
   },
   "scripts": {
     "dev": "astro dev",
@@ -12,7 +12,12 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.16.18",
+    "@astrojs/sitemap": "^3.7.1",
+    "astro": "^5.18.1",
     "three": "^0.183.2"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.7",
+    "typescript": "^5.9.3"
   }
 }

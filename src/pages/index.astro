@@ -17,6 +17,10 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
         and community-driven change through learning, preventive healthcare, women empowerment and youth livelihood
         interventions.
       </p>
+      <p class="hero-scholarship-note">
+        Merit Scholarship 2026: Support for <strong>1,000 students</strong> with scholarship assistance up to
+        <strong>Rs 4,50,000</strong> for eligible intermediate passing students.
+      </p>
       <div class="pill-row">
         <a href="/donate">Donate Now</a>
         <a href="/programmes">Explore Programmes</a>
@@ -29,7 +33,6 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
         <img
           src="https://upload.wikimedia.org/wikipedia/commons/0/07/Teacher_explaining_students_in_Greenwood_High_School.jpg"
           alt="Teacher with students in a Telangana classroom learning session"
-          onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/f/f3/Playing_students_yellanki_high_school.jpg';"
           loading="eager"
           class="hero-mosaic-img"
         />
@@ -47,7 +50,6 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/f/f3/Playing_students_yellanki_high_school.jpg"
             alt="Children playing and learning at Yellanki high school"
-            onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/5/5d/Children_School_in_Duppelli.jpg';"
             loading="lazy"
           />
         </div>
@@ -59,7 +61,6 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
           <img
             src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Childrens_day_group_photo.jpg"
             alt="Children group photo from a Telangana school event"
-            onerror="this.onerror=null;this.src='https://upload.wikimedia.org/wikipedia/commons/0/05/High_school_yellanki.jpg';"
             loading="lazy"
           />
         </div>
@@ -68,6 +69,59 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
       <div class="hero-float">
         <h3>Impact Lens</h3>
         <p>Transparent action and district-level accountability.</p>
+      </div>
+    </article>
+  </section>
+
+  <section class="section scholarship-focus" data-reveal>
+    <article class="card scholarship-copy" data-pulse>
+      <span class="scholarship-chip">Merit Scholarship Program 2026</span>
+      <h2>Scholarship Support For 1,000 Students</h2>
+      <p class="lead">
+        TEF scholarship flow is now clearly structured for intermediate passing students who need financial support to
+        continue higher education.
+      </p>
+      <ul class="number-list">
+        <li>For 1,000 students in the 2026 scholarship intake.</li>
+        <li>Up to Rs 4,50,000 scholarship support for eligible candidates.</li>
+        <li>Target group: intermediate passing students from deserving backgrounds.</li>
+      </ul>
+      <div class="pill-row scholarship-pill-row">
+        <span>Registration</span>
+        <span>Online Test</span>
+        <span>Document Review</span>
+        <span>Selection</span>
+      </div>
+    </article>
+
+    <article class="card scholarship-poster" data-pulse>
+      <img
+        class="poster-flyer"
+        src="/scholarship-flyer.svg"
+        alt="TEF Merit Scholarship Program 2026 flyer"
+        loading="eager"
+      />
+      <div class="poster-head">
+        <p class="poster-kicker">Telangana Educational Foundation</p>
+        <h3>Scholarship Up To Rs 4,50,000</h3>
+      </div>
+      <div class="poster-grid">
+        <div class="poster-block">
+          <h4>Who Can Apply</h4>
+          <p>Intermediate passing students seeking support for higher education.</p>
+        </div>
+        <div class="poster-block">
+          <h4>Test Areas</h4>
+          <p>General Knowledge, Logical Reasoning and Telangana awareness.</p>
+        </div>
+        <div class="poster-block">
+          <h4>Required Documents</h4>
+          <p>ID proof, academic certificates and college admission proof.</p>
+        </div>
+        <div class="poster-block poster-highlight">
+          <h4>Main Focus</h4>
+          <p>1,000 students with transparent, merit-based scholarship selection.</p>
+        </div>
       </div>
     </article>
   </section>
@@ -172,6 +226,15 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
     font-weight: 600;
   }
 
+  .hero-scholarship-note {
+    border-left: 4px solid #43a067;
+    background: rgba(225, 246, 232, 0.7);
+    border-radius: 10px;
+    padding: 0.7rem 0.8rem;
+    color: #1f4c35;
+    font-weight: 500;
+  }
+
   .hero h1 {
     line-height: 1;
   }
@@ -226,7 +289,110 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
     display: block;
     width: 54px;
     height: 54px;
-    object-fit: contain;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  .scholarship-focus {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    gap: 0.9rem;
+  }
+
+  .scholarship-copy,
+  .scholarship-poster {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .scholarship-chip {
+    display: inline-flex;
+    width: fit-content;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #1f5e40;
+    background: rgba(206, 242, 216, 0.9);
+    border: 1px solid rgba(74, 171, 108, 0.4);
+    font-weight: 700;
+  }
+
+  .scholarship-pill-row span {
+    color: #1f5e40;
+    border-color: rgba(74, 171, 108, 0.4);
+    background: rgba(236, 250, 240, 0.92);
+  }
+
+  .scholarship-poster {
+    border: 1px solid rgba(85, 175, 114, 0.35);
+    background: linear-gradient(160deg, rgba(242, 252, 246, 0.95), rgba(223, 244, 231, 0.82));
+  }
+
+  .poster-flyer {
+    width: 100%;
+    border-radius: 14px;
+    border: 1px solid rgba(81, 169, 111, 0.35);
+    display: block;
+    object-fit: cover;
+    max-height: 430px;
+  }
+
+  .scholarship-poster.flyer-missing .poster-head {
+    margin-top: 0;
+  }
+
+  .poster-head {
+    border-radius: 14px;
+    padding: 0.85rem;
+    background: linear-gradient(135deg, #12548c, #1a7a61);
+    color: #ffffff;
+  }
+
+  .poster-kicker {
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.86);
+  }
+
+  .poster-head h3 {
+    margin-top: 0.35rem;
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+  }
+
+  .poster-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.7rem;
+  }
+
+  .poster-block {
+    border-radius: 14px;
+    padding: 0.8rem;
+    border: 1px solid rgba(85, 175, 114, 0.3);
+    background: rgba(255, 255, 255, 0.86);
+  }
+
+  .poster-block h4 {
+    margin: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #1f5e40;
+  }
+
+  .poster-block p {
+    margin-top: 0.35rem;
+    color: #2f5c43;
+    font-size: 0.95rem;
+  }
+
+  .poster-highlight {
+    background: linear-gradient(145deg, rgba(205, 242, 216, 0.92), rgba(235, 251, 241, 0.9));
   }
 
   /* Tagline on main image */
@@ -329,6 +495,14 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
     .hero-visual,
     [data-hero-canvas] {
       min-height: 420px;
+    }
+
+    .scholarship-focus {
+      grid-template-columns: 1fr;
+    }
+
+    .poster-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>

@@ -8,8 +8,8 @@ export const navItems = [
 ];
 
 export const impactStats = [
-  { value: '20L+', label: 'Children and families reached every year through integrated interventions.' },
-  { value: '2,000+', label: 'Villages and urban settlements connected with support systems.' },
+  { value: '1,000 Students', label: 'Merit Scholarship intake target for the current cycle.' },
+  { value: 'Up to Rs 4,50,000', label: 'Scholarship support for eligible intermediate passing students.' },
   { value: '400+', label: 'Ground projects across education, healthcare, livelihood and women empowerment.' },
   { value: '27+', label: 'States and outreach corridors represented through partnerships and implementation.' }
 ];

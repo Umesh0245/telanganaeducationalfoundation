@@ -1,13 +1,13 @@
 :root {
-  --bg-primary: #f4fbff;
-  --bg-secondary: #e7f7ef;
-  --teal: #0f8f76;
+  --bg-primary: #f3fbf5;
+  --bg-secondary: #e6f7ee;
+  --teal: #218a5a;
   --sky: #0086d1;
   --gold: #e7a31f;
   --text-primary: #0f2b3d;
   --text-muted: #36566d;
-  --glass: rgba(255, 255, 255, 0.62);
-  --glass-border: rgba(94, 172, 214, 0.34);
+  --glass: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(91, 176, 123, 0.35);
 }
 
 * {
@@ -19,8 +19,8 @@ body {
   margin: 0;
   min-height: 100%;
   scroll-behavior: smooth;
-  background: radial-gradient(circle at 10% 10%, #b9ecff, transparent 38%),
-    radial-gradient(circle at 84% 82%, #b7f1d2, transparent 30%),
+  background: radial-gradient(circle at 10% 10%, #d1f2df, transparent 40%),
+    radial-gradient(circle at 84% 82%, #c3efda, transparent 33%),
     linear-gradient(155deg, var(--bg-primary), var(--bg-secondary));
   color: var(--text-primary);
   font-family: 'IBM Plex Sans', sans-serif;
@@ -50,8 +50,8 @@ a {
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: linear-gradient(rgba(0, 121, 190, 0.13) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 121, 190, 0.13) 1px, transparent 1px);
+  background-image: linear-gradient(rgba(52, 145, 92, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(52, 145, 92, 0.14) 1px, transparent 1px);
   background-size: 36px 36px;
   mask-image: radial-gradient(circle at center, black 18%, transparent 82%);
   opacity: 0.35;
@@ -87,7 +87,9 @@ a {
 .brand img {
   width: 70px;
   height: 70px;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(54, 145, 89, 0.35);
 }
 
 .brand span {
@@ -115,8 +117,8 @@ nav a {
 nav a:hover,
 nav a.is-active {
   color: var(--text-primary);
-  border-color: rgba(47, 140, 186, 0.45);
-  background: rgba(193, 231, 255, 0.42);
+  border-color: rgba(71, 160, 103, 0.46);
+  background: rgba(214, 242, 224, 0.68);
 }
 
 .cta {
@@ -139,7 +141,7 @@ main {
   padding: clamp(1.1rem, 2vw, 1.7rem);
   border-radius: 24px;
   background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(110, 194, 248, 0.32);
+  border: 1px solid rgba(120, 195, 148, 0.35);
 }
 
 .section h1,
@@ -190,7 +192,7 @@ main {
   padding: 1rem;
   border-radius: 18px;
   background: rgba(255, 255, 255, 0.82);
-  border: 1px solid rgba(154, 219, 255, 0.34);
+  border: 1px solid rgba(143, 203, 162, 0.34);
   overflow: hidden;
 }
 
@@ -198,7 +200,7 @@ main {
   content: '';
   position: absolute;
   inset: -20%;
-  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(66, 173, 222, 0.2), transparent 42%);
+  background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(79, 176, 110, 0.2), transparent 42%);
   opacity: 0;
   transition: opacity 0.25s ease;
 }
@@ -238,7 +240,7 @@ main {
 }
 
 .chip {
-  border: 1px solid rgba(88, 168, 214, 0.34);
+  border: 1px solid rgba(95, 177, 123, 0.34);
   border-radius: 14px;
   background: rgba(255, 255, 255, 0.75);
   padding: 0.8rem;
@@ -274,7 +276,7 @@ main {
 
 .pill-row a,
 .pill-row span {
-  border: 1px solid rgba(86, 174, 223, 0.35);
+  border: 1px solid rgba(91, 177, 120, 0.35);
   border-radius: 999px;
   padding: 0.54rem 0.9rem;
   font-weight: 600;
@@ -294,7 +296,7 @@ main {
 .image-card {
   overflow: hidden;
   border-radius: 20px;
-  border: 1px solid rgba(88, 168, 214, 0.36);
+  border: 1px solid rgba(99, 181, 126, 0.36);
   background: rgba(255, 255, 255, 0.86);
   box-shadow: 0 18px 36px rgba(53, 130, 177, 0.15);
 }
@@ -324,7 +326,7 @@ main {
   margin: 0 auto 2.4rem;
   padding: 1.4rem;
   background: rgba(255, 255, 255, 0.78);
-  border: 1px solid rgba(93, 178, 236, 0.35);
+  border: 1px solid rgba(101, 184, 129, 0.35);
   border-radius: 22px;
   display: grid;
   gap: 0.6rem;
@@ -344,7 +346,9 @@ main {
 .footer-brand img {
   width: 72px;
   height: 72px;
-  object-fit: contain;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid rgba(65, 158, 98, 0.35);
 }
 
 .footer-content {

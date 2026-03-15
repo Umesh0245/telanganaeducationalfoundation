@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from 'astro:transitions';
+import { ClientRouter } from 'astro:transitions';
 import { navItems, foundationGallery } from '../data/site';
 import '../styles/global.css';
 
@@ -28,7 +28,7 @@ const { title, description = 'Telangana Educational Foundation website', activeP
       rel="stylesheet"
     />
     <title>{title}</title>
-    <ViewTransitions />
+    <ClientRouter />
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -98,6 +98,6 @@ const { title, description = 'Telangana Educational Foundation website', activeP
       <p class="copyright">© {new Date().getFullYear()} Telangana Educational Foundation. All rights reserved.</p>
     </footer>
 
-    <script type="module" src="/scripts/site-motion.js"></script>
+    <script is:inline type="module" src="/scripts/site-motion.js"></script>
   </body>
 </html>
