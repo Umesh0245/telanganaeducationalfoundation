@@ -28,7 +28,13 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
       </article>
 
       <article class="card landing-flyer-card" data-pulse>
-        <img class="landing-flyer" src="/scholarship-flyer.svg" alt="TEF Merit Scholarship Program 2026 official flyer" loading="eager" />
+        <img
+          class="landing-flyer"
+          src="https://upload.wikimedia.org/wikipedia/commons/8/8d/Jyothi_engineering_college_vettikkattiri_students.jpg"
+          alt="Indian students preparing for engineering education"
+          loading="eager"
+        />
+        <p class="landing-image-note">Indian students preparing for engineering and technical higher education.</p>
       </article>
     </div>
 
@@ -38,6 +44,32 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
         The scholarship flow is designed to be simple and clear for students and families, from registration to final
         selection.
       </p>
+      <div class="scholarship-study-grid" aria-label="Students studying through scholarship support">
+        <article class="study-image-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Students_at_SRMS_CET_Unnao.jpg"
+            alt="Indian students in a college learning environment"
+            loading="lazy"
+          />
+          <p>Intermediate to engineering transition support</p>
+        </article>
+        <article class="study-image-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/9/9b/PCoE_students_at_AICTE_Regional_Office_in_Mumbai.jpg"
+            alt="Indian students engaging in technical education orientation"
+            loading="lazy"
+          />
+          <p>Career and engineering guidance exposure</p>
+        </article>
+        <article class="study-image-card">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/c/c3/M._Venkaiah_Naidu_interacting_with_the_Students_after_inaugurating_the_newly_constructed_Lecture_Hall-cum-Laboratory_Complex%2C_at_the_Andhra_University_College_of_Engineering_for_Women%2C_in_Visakhapatnam%2C_Andhra_Pradesh.jpg"
+            alt="Indian women engineering students in a higher education setting"
+            loading="lazy"
+          />
+          <p>Women students in engineering pathways</p>
+        </article>
+      </div>
       <div class="landing-stat-row">
         <article class="landing-stat-card">
           <p class="stat-kicker">Total Intake</p>
@@ -331,6 +363,14 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
     display: block;
   }
 
+  .landing-image-note {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #2b6048;
+    line-height: 1.5;
+    font-weight: 600;
+  }
+
   .scholarship-chip {
     display: inline-flex;
     width: fit-content;
@@ -360,6 +400,34 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
 
   .landing-details h3 {
     font-size: clamp(1.55rem, 2.2vw, 2rem);
+  }
+
+  .scholarship-study-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.65rem;
+  }
+
+  .study-image-card {
+    border: 1px solid rgba(101, 182, 128, 0.34);
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.88);
+    overflow: hidden;
+  }
+
+  .study-image-card img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    display: block;
+  }
+
+  .study-image-card p {
+    margin: 0;
+    padding: 0.5rem 0.6rem;
+    font-size: 0.85rem;
+    color: #24563f;
+    font-weight: 600;
   }
 
   .landing-stat-row {
@@ -536,6 +604,10 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .scholarship-study-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .landing-scholarship-copy h1 {
       font-size: clamp(1.9rem, 2.45vw, 2.25rem);
     }
@@ -597,6 +669,10 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
     }
 
     .landing-stat-row {
+      grid-template-columns: 1fr;
+    }
+
+    .scholarship-study-grid {
       grid-template-columns: 1fr;
     }
   }
