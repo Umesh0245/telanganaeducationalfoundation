@@ -9,39 +9,58 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
   activePath="/"
 >
   <section class="section landing-scholarship" data-reveal>
-    <article class="card landing-flyer-card" data-pulse>
-      <img class="landing-flyer" src="/scholarship-flyer.svg" alt="TEF Merit Scholarship Program 2026 official flyer" loading="eager" />
-    </article>
+    <div class="landing-scholarship-top">
+      <article class="card landing-scholarship-copy" data-pulse>
+        <span class="scholarship-chip">Merit Scholarship Program 2026</span>
+        <h1>Empowering Telangana Students Through Higher-Education Scholarships</h1>
+        <p class="lead">
+          TEF scholarship initiative supports deserving intermediate passing students with structured financial
+          assistance, transparent selection and academic continuity support.
+        </p>
+        <p class="hero-scholarship-note">
+          For <strong>1,000 students</strong>, scholarship support is available up to <strong>Rs 4,50,000</strong>
+          based on merit and eligibility.
+        </p>
+        <div class="pill-row">
+          <a href="/donate">Support This Scholarship</a>
+          <a href="/programmes">Eligibility & Programmes</a>
+        </div>
+      </article>
 
-    <article class="card landing-scholarship-copy" data-pulse>
-      <span class="scholarship-chip">Merit Scholarship Program 2026</span>
-      <h1>For 1,000 Students: Scholarship Up To Rs 4,50,000</h1>
-      <p class="lead">
-        Telangana Educational Foundation is opening scholarship support for intermediate passing students to continue
-        higher education through a transparent, merit-based process.
+      <article class="card landing-flyer-card" data-pulse>
+        <img class="landing-flyer" src="/scholarship-flyer.svg" alt="TEF Merit Scholarship Program 2026 official flyer" loading="eager" />
+      </article>
+    </div>
+
+    <article class="card landing-details" data-pulse>
+      <h3>Scholarship Details At A Glance</h3>
+      <p>
+        The scholarship flow is designed to be simple and clear for students and families, from registration to final
+        selection.
       </p>
       <div class="landing-stat-row">
         <article class="landing-stat-card">
           <p class="stat-kicker">Total Intake</p>
           <h3>1,000 Students</h3>
-          <p>Students will be selected through fair and structured screening.</p>
+          <p>Selected through fair screening and documented eligibility checks.</p>
         </article>
         <article class="landing-stat-card">
           <p class="stat-kicker">Scholarship Value</p>
           <h3>Up To Rs 4,50,000</h3>
-          <p>Financial support for eligible intermediate passing students.</p>
+          <p>Financial support for eligible intermediate passing candidates.</p>
+        </article>
+        <article class="landing-stat-card">
+          <p class="stat-kicker">Required Documents</p>
+          <h3>ID + Academics + Admission</h3>
+          <p>ID proof, academic records and college admission proof are required.</p>
         </article>
       </div>
-      <ul class="number-list">
-        <li>Eligibility focus: Intermediate passing students from deserving backgrounds.</li>
-        <li>Assessment areas: General Knowledge, Logical Reasoning and Telangana awareness.</li>
-        <li>Documents: ID proof, academic certificates and college admission proof.</li>
-      </ul>
       <div class="scholarship-process" aria-label="Scholarship process steps">
-        <span><strong>1</strong>Register</span>
-        <span><strong>2</strong>Apply</span>
-        <span><strong>3</strong>Test</span>
-        <span><strong>4</strong>Selection</span>
+        <span><strong>1</strong>Register Online</span>
+        <span><strong>2</strong>Fill Application</span>
+        <span><strong>3</strong>Take Online Test</span>
+        <span><strong>4</strong>Submit Documents</span>
+        <span><strong>5</strong>Get Selection Result</span>
       </div>
     </article>
   </section>
@@ -280,7 +299,13 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
 
   .landing-scholarship {
     display: grid;
-    grid-template-columns: 1.02fr 0.98fr;
+    gap: 1rem;
+    align-content: start;
+  }
+
+  .landing-scholarship-top {
+    display: grid;
+    grid-template-columns: 1.03fr 0.97fr;
     gap: 1rem;
     align-items: stretch;
   }
@@ -328,9 +353,18 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
     line-height: 1.02;
   }
 
+  .landing-details {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .landing-details h3 {
+    font-size: clamp(1.55rem, 2.2vw, 2rem);
+  }
+
   .landing-stat-row {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 0.65rem;
   }
 
@@ -365,7 +399,7 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
 
   .scholarship-process {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 0.55rem;
   }
 
@@ -498,6 +532,10 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
       max-height: 710px;
     }
 
+    .landing-stat-row {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .landing-scholarship-copy h1 {
       font-size: clamp(1.9rem, 2.45vw, 2.25rem);
     }
@@ -514,7 +552,7 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
       min-height: 420px;
     }
 
-    .landing-scholarship {
+    .landing-scholarship-top {
       grid-template-columns: 1fr;
     }
 
@@ -531,7 +569,7 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
     }
 
     .landing-stat-row {
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
 
@@ -555,6 +593,10 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
     }
 
     .scholarship-process {
+      grid-template-columns: 1fr;
+    }
+
+    .landing-stat-row {
       grid-template-columns: 1fr;
     }
   }
