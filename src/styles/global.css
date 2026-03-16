@@ -371,14 +371,14 @@ main {
 }
 
 [data-reveal] {
-  opacity: 0;
-  transform: translateY(20px) scale(0.98);
-  transition: opacity 0.65s ease var(--delay, 0ms), transform 0.65s ease var(--delay, 0ms);
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 [data-reveal].revealed {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: none;
 }
 
 @media (max-width: 1366px) {

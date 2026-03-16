@@ -17,6 +17,14 @@ const domainPriorities = [
   'Employer-linked skilling and placement transitions for youth.',
   'Community resilience planning for climate and migration stress.'
 ];
+
+const scholarshipSelectionSteps = [
+  'Take office test.',
+  'Qualified students register for online test for Rs 900.',
+  'Online interview.',
+  '1,000 qualified students can get Rs 4,50,000 scholarship.',
+  'Take offline test in college.'
+];
 ---
 
 <MainLayout
@@ -49,6 +57,13 @@ const domainPriorities = [
         adaptive and outcome-oriented.
       </p>
     </div>
+  </section>
+
+  <section class="section" data-reveal>
+    <h2>Scholarship Selection Process</h2>
+    <ol class="number-list">
+      {scholarshipSelectionSteps.map((step) => <li>{step}</li>)}
+    </ol>
   </section>
 
   <section class="section" data-reveal>
