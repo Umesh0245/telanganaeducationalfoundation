@@ -128,7 +128,7 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
         <div class="hero-mosaic-overlay"></div>
         <!-- Logo badge -->
         <div class="hero-logo-badge">
-          <img src="/tef-logo.jpeg" alt="Telangana Educational Foundation" class="hero-logo-small" />
+          <img src="/tef-logo-tight.png" alt="Telangana Educational Foundation" class="hero-logo-small" />
         </div>
         <p class="hero-mosaic-tag">Transforming Lives Across Telangana</p>
       </div>
@@ -314,18 +314,20 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
     top: 0.9rem;
     left: 0.9rem;
     z-index: 3;
-    padding: 0.35rem 0.45rem;
-    border-radius: 12px;
-    background: rgba(255, 255, 255, 0.93);
-    border: 1px solid rgba(114, 186, 232, 0.45);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    padding: 0;
+    border-radius: 999px;
+    background: transparent;
+    border: none;
+    box-shadow: 0 8px 22px rgba(11, 56, 82, 0.32);
+    overflow: hidden;
   }
 
   .hero-logo-small {
     display: block;
-    width: 54px;
-    height: 54px;
+    width: 58px;
+    height: 58px;
     object-fit: cover;
+    object-position: center;
     border-radius: 50%;
   }
 
