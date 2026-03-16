@@ -364,9 +364,31 @@ main {
 }
 
 .footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem 1.3rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) repeat(2, minmax(180px, 1fr));
+  gap: 1rem 1.3rem;
+}
+
+.footer-contact-item {
+  display: grid;
+  gap: 0.16rem;
+}
+
+.footer-contact-item p {
+  margin: 0;
+}
+
+.footer-contact-item a {
+  color: #1a5977;
+  font-weight: 600;
+}
+
+.footer-contact-label {
+  color: #2f6a4c;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .copyright {
@@ -426,6 +448,10 @@ main {
     font-size: 1.03rem;
   }
 
+  .footer-content {
+    grid-template-columns: 1fr 1fr;
+  }
+
   nav {
     width: 100%;
     order: 3;
@@ -455,6 +481,10 @@ main {
   .site-header {
     width: calc(100% - 0.75rem);
     margin-top: 0.6rem;
+
+  .footer-content {
+    grid-template-columns: 1fr;
+  }
   }
 
   main,

@@ -7,6 +7,15 @@ export const navItems = [
   { href: '/donate', label: 'Donate' }
 ];
 
+export const contactDetails = {
+  addressLine1: 'Gachibowli, Sherlingampally, opposite Skyview',
+  addressLine2: 'Office 291/99, 3rd Floor, Vishwak Reality',
+  cityLine: 'Hyderabad, Telangana, India',
+  phoneDisplay: '+91 93986 96793',
+  phoneHref: 'tel:+919398696793',
+  email: 'info@telanganaeducationalfoundation.org'
+};
+
 export const impactStats = [
   { value: '1,000 Students', label: 'Merit Scholarship intake target for the current cycle.' },
   { value: 'Up to Rs 4,50,000', label: 'Scholarship support for eligible intermediate passing students.' },

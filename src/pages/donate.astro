@@ -1,6 +1,6 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-import { foundationGallery } from '../data/site';
+import { foundationGallery, contactDetails } from '../data/site';
 ---
 
 <MainLayout
@@ -43,6 +43,18 @@ import { foundationGallery } from '../data/site';
       <p>Join education mentoring, health awareness events and youth career readiness workshops.</p>
       <div class="pill-row">
         <a href="mailto:info@telanganaeducationalfoundation.org">Register Interest</a>
+      </div>
+    </article>
+
+    <article class="card" data-pulse>
+      <span class="badge">04</span>
+      <h3>Visit Or Call Us</h3>
+      <p>{contactDetails.addressLine1}</p>
+      <p>{contactDetails.addressLine2}</p>
+      <p>{contactDetails.cityLine}</p>
+      <div class="pill-row">
+        <a href={contactDetails.phoneHref}>{contactDetails.phoneDisplay}</a>
+        <a href={`mailto:${contactDetails.email}`}>Email Office</a>
       </div>
     </article>
   </section>

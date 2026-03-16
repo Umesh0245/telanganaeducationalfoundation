@@ -1,6 +1,6 @@
 ---
 import { ClientRouter } from 'astro:transitions';
-import { navItems, foundationGallery } from '../data/site';
+import { navItems, foundationGallery, contactDetails } from '../data/site';
 import '../styles/global.css';
 
 interface Props {
@@ -93,9 +93,20 @@ const { title, description = 'Telangana Educational Foundation website', activeP
         <h3>Telangana Educational Foundation</h3>
       </div>
       <div class="footer-content">
-        <p>Hyderabad, Telangana, India</p>
-        <p>info@telanganaeducationalfoundation.org</p>
-        <p>+91 40 0000 0000</p>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Address</span>
+          <p>{contactDetails.addressLine1}</p>
+          <p>{contactDetails.addressLine2}</p>
+          <p>{contactDetails.cityLine}</p>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Email</span>
+          <p><a href={`mailto:${contactDetails.email}`}>{contactDetails.email}</a></p>
+        </div>
+        <div class="footer-contact-item">
+          <span class="footer-contact-label">Phone</span>
+          <p><a href={contactDetails.phoneHref}>{contactDetails.phoneDisplay}</a></p>
+        </div>
       </div>
       <p class="copyright">© {new Date().getFullYear()} Telangana Educational Foundation. All rights reserved.</p>
     </footer>
