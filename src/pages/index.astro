@@ -32,6 +32,12 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
           <p class="intro-quote-highlight">
             1,000 qualified students can receive scholarship support up to Rs 4,50,000 for higher education pathways.
           </p>
+          <div class="intro-steps" aria-label="Scholarship steps quick view">
+            <span><strong>1</strong>Offline Test In College</span>
+            <span><strong>2</strong>Online Registration (Rs 900)</span>
+            <span><strong>3</strong>Online Test + Interview</span>
+            <span><strong>4</strong>Top 1000: Up To Rs 4,50,000</span>
+          </div>
           <ul class="intro-quote-points">
             <li>Clear process from offline college test to online interview.</li>
             <li>Merit, documentation and eligibility based final selection.</li>
@@ -45,11 +51,32 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
       </div>
 
       <div class="landing-intro-image-wrap">
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Twin_sisters_wearing_school_uniform_in_Si_Phan_Don.jpg"
-          alt="School children in colorful uniforms"
-          loading="eager"
-        />
+        <div class="portrait-collage" aria-label="Portrait collage of children">
+          <img
+            class="portrait-tile portrait-tall portrait-bw"
+            src="https://upload.wikimedia.org/wikipedia/commons/a/ac/School_Girl_%2825385785160%29.jpg"
+            alt="Black and white school girl portrait"
+            loading="eager"
+          />
+          <img
+            class="portrait-tile"
+            src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Portrait_of_a_Smiling_Little_Indian_Girl_-_Flickr_-_Nithi_clicks.jpg"
+            alt="Smiling Indian school girl portrait"
+            loading="lazy"
+          />
+          <img
+            class="portrait-tile"
+            src="https://upload.wikimedia.org/wikipedia/commons/6/64/Portrait_of_a_beautiful_Indian_little_girl_%2843029465342%29.jpg"
+            alt="Indian child portrait"
+            loading="lazy"
+          />
+          <img
+            class="portrait-tile portrait-wide"
+            src="https://upload.wikimedia.org/wikipedia/commons/9/9b/Portrait_of_a_beautiful_Indian_little_girl_%2828897413027%29.jpg"
+            alt="Colorful child portrait"
+            loading="lazy"
+          />
+        </div>
         <p class="landing-intro-image-tag">Telangana Kids, Brighter Futures</p>
       </div>
     </article>
@@ -392,9 +419,10 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
     gap: 0.76rem;
     padding: clamp(0.88rem, 1.5vw, 1.35rem);
     border-radius: 16px;
-    background: linear-gradient(165deg, rgba(255, 255, 255, 0.92), rgba(238, 250, 243, 0.9));
-    border: 1px solid rgba(126, 197, 151, 0.34);
+    background: linear-gradient(165deg, rgba(248, 255, 251, 0.98), rgba(223, 247, 233, 0.94));
+    border: 1px solid rgba(86, 168, 116, 0.4);
     height: 100%;
+    box-shadow: 0 14px 30px rgba(24, 96, 66, 0.12);
   }
 
   .intro-quote-kicker {
@@ -418,8 +446,8 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
 
   .landing-intro-quote h1 {
     margin: 0;
-    color: #12384f;
-    font-size: clamp(1.42rem, 2.45vw, 1.95rem);
+    color: #0e3550;
+    font-size: clamp(1.55rem, 2.65vw, 2.1rem);
     line-height: 1.03;
   }
 
@@ -436,11 +464,44 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
 
   .intro-quote-highlight {
     border-left: 4px solid #2f965f;
-    background: rgba(223, 247, 232, 0.86);
+    background: rgba(203, 241, 216, 0.92);
     border-radius: 10px;
     padding: 0.55rem 0.65rem;
     color: #1f5d3f;
     font-weight: 600;
+  }
+
+  .intro-steps {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.42rem;
+  }
+
+  .intro-steps span {
+    border: 1px solid rgba(86, 169, 116, 0.42);
+    border-radius: 10px;
+    padding: 0.42rem 0.45rem;
+    background: rgba(237, 252, 242, 0.95);
+    color: #1f5f42;
+    font-size: 0.76rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    line-height: 1.25;
+  }
+
+  .intro-steps strong {
+    width: 1.05rem;
+    height: 1.05rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: #2a8e5f;
+    font-size: 0.65rem;
+    flex-shrink: 0;
   }
 
   .intro-quote-points {
@@ -520,13 +581,40 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
     box-shadow: 0 20px 35px rgba(26, 101, 69, 0.14);
   }
 
-  .landing-intro-image-wrap img {
+  .portrait-collage {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    grid-template-rows: repeat(3, minmax(0, 1fr));
+    gap: 0.3rem;
+    padding: 0.3rem;
+    background: rgba(9, 41, 62, 0.12);
+  }
+
+  .portrait-tile {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center 30%;
     display: block;
-    transform: scale(1.015);
+    border-radius: 10px;
+    border: 1px solid rgba(121, 190, 146, 0.22);
+    box-shadow: 0 8px 16px rgba(12, 49, 73, 0.12);
+  }
+
+  .portrait-bw {
+    filter: grayscale(100%);
+  }
+
+  .portrait-tall {
+    grid-row: 1 / span 2;
+    object-position: center 24%;
+  }
+
+  .portrait-wide {
+    grid-column: 1 / span 2;
+    object-position: center 18%;
   }
 
   .landing-intro-image-tag {
@@ -939,6 +1027,17 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
       min-height: 330px;
     }
 
+    .portrait-collage {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-rows: repeat(2, minmax(0, 1fr));
+    }
+
+    .portrait-tall,
+    .portrait-wide {
+      grid-column: auto;
+      grid-row: auto;
+    }
+
     .hero {
       grid-template-columns: 1fr;
       min-height: auto;
@@ -1009,6 +1108,10 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
       gap: 0.7rem;
     }
 
+    .intro-steps {
+      grid-template-columns: 1fr;
+    }
+
     .intro-btn {
       font-size: 0.8rem;
       min-width: 124px;
@@ -1021,6 +1124,11 @@ import { impactStats, programmes, campaigns, accreditations, foundationGallery }
       aspect-ratio: 4 / 5;
       min-height: 320px;
       order: -1;
+    }
+
+    .portrait-collage {
+      gap: 0.24rem;
+      padding: 0.24rem;
     }
 
     .hero-kicker {
