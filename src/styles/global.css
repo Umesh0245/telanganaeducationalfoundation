@@ -381,6 +381,8 @@ main {
 .footer-contact-item a {
   color: #1a5977;
   font-weight: 600;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .footer-contact-label {
@@ -481,10 +483,10 @@ main {
   .site-header {
     width: calc(100% - 0.75rem);
     margin-top: 0.6rem;
+  }
 
   .footer-content {
     grid-template-columns: 1fr;
-  }
   }
 
   main,
